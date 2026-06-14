@@ -29,7 +29,7 @@ export interface SearchHistoryItem {
   timestamp: number
 }
 
-export type PageType = 'home' | 'search' | 'detail' | 'category' | 'photo' | 'guide'
+export type PageType = 'home' | 'search' | 'detail' | 'category' | 'photo' | 'guide' | 'quiz'
 
 export interface AppState {
   currentPage: PageType

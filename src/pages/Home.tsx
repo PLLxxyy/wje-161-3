@@ -104,12 +104,15 @@ const Home: React.FC<Props> = ({
         ))}
       </div>
 
-      <div style={{ display: 'flex', gap: 12, margin: '16px 0' }}>
-        <button className="btn btn-outline" style={{ flex: 1 }} onClick={() => onNavigate('photo')}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, margin: '16px 0' }}>
+        <button className="btn btn-outline" onClick={() => onNavigate('photo')}>
           📷 拍照识物
         </button>
-        <button className="btn btn-outline" style={{ flex: 1 }} onClick={() => onNavigate('guide')}>
+        <button className="btn btn-outline" onClick={() => onNavigate('guide')}>
           📖 分类指南
+        </button>
+        <button className="btn btn-outline" onClick={() => onNavigate('quiz')}>
+          🧠 知识测验
         </button>
       </div>
 

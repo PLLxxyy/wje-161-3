@@ -9,11 +9,13 @@ import ItemDetail from './pages/ItemDetail'
 import CategoryPage from './pages/CategoryPage'
 import PhotoSearch from './pages/PhotoSearch'
 import Guide from './pages/Guide'
+import Quiz from './pages/Quiz'
 
 const navItems: { page: PageType; label: string }[] = [
   { page: 'home', label: '首页' },
   { page: 'photo', label: '拍照识物' },
   { page: 'guide', label: '分类指南' },
+  { page: 'quiz', label: '知识测验' },
 ]
 
 const App: React.FC = () => {
@@ -131,6 +133,10 @@ const App: React.FC = () => {
 
       {page === 'guide' && (
         <Guide onBack={() => setPage('home')} />
+      )}
+
+      {page === 'quiz' && (
+        <Quiz onBack={() => setPage('home')} onDetailClick={handleDetailClick} />
       )}
 
       <footer className="footer">
